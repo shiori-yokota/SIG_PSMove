@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world name="myworld2">
+
+  <!--重力の設定-->
+  <gravity x="0.0" y="-980.7" z="0.0"/>
+
+  <!--エージェントMan-niiの設定-->
+  <instanciate class="Man-nii.xml">
+    <!--エージェント名-->
+    <set-attr-value name="name" value="man_000"/>
+    <!--C++言語の指定-->
+    <set-attr-value name="language" value="c++"/>
+    <!--オブジェクトファイルAgentController.soの指定-->
+    <set-attr-value name="implementation" value="./AgentController.so"/>
+    <!--動力学演算をfalseに設定-->
+    <set-attr-value name="dynamics" value="false"/>
+    <!--エージェントの位置(x,y,z)-->
+    <set-attr-value name="x" value="-204.736"/>
+    <set-attr-value name="y" value="60.0"/>
+    <set-attr-value name="z" value="-30.0"/>
+    <set-attr-value name="qw" value="0.0"/>
+    <set-attr-value name="qx" value="0.0"/>
+    <set-attr-value name="qy" value="1.0"/>
+    <set-attr-value name="qz" value="0.0"/>
+  </instanciate>
+  <!--object-->
+  <instanciate class="seDoll_Bear.xml">
+    <set-attr-value name="name" value="petbottle_1"/>
+    <set-attr-value name="dynamics" value="false"/>
+    <set-attr-value name="x" value="-204.736"/>
+    <set-attr-value name="y" value="62.7"/>
+    <set-attr-value name="z" value="-95.0"/>
+    <set-attr-value name="collision" value="true"/>
+  </instanciate>
+
+</world>
