@@ -94,10 +94,15 @@ void quatMul(float q1_w, float q1_x, float q1_y, float q1_z,
              float q2_w, float q2_x, float q2_y, float q2_z,
              float *qw, float *qx, float *qy, float *qz)
 {
-	*qw = q1_w * q2_w - q1_x * q2_x - q1_y * q2_y - q1_z * q2_z;
-	*qx = q1_w * q2_x + q1_x * q2_w + q1_y * q2_z - q1_z * q2_y;
-	*qy = q1_w * q2_y - q1_x * q2_z + q1_y * q2_w + q1_z * q2_x;
-	*qz = q1_w * q2_z + q1_x * q2_y - q1_y * q2_x + q1_z * q2_w;
+	float _qw, _qx, _qy, _qz;
+	_qw = q1_w * q2_w - q1_x * q2_x - q1_y * q2_y - q1_z * q2_z;
+	_qx = q1_w * q2_x + q1_x * q2_w + q1_y * q2_z - q1_z * q2_y;
+	_qy = q1_w * q2_y - q1_x * q2_z + q1_y * q2_w + q1_z * q2_x;
+	_qz = q1_w * q2_z + q1_x * q2_y - q1_y * q2_x + q1_z * q2_w;
+	*qw = _qw;
+	*qx = _qx;
+	*qy = _qy;
+	*qz = _qz;
 }
 
 #endif
